@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Mengatur tinggi minimum body agar sesuai dengan viewport */
+  overflow-x: hidden; /* Mencegah scrolling horizontal */
+}
+
+body.background-image {
+  background-image: url("../images/polusi.jpg");
+  background-size: cover; /* Gambar menutupi seluruh area body */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Menggulung latar belakang dengan konten */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Menambahkan jarak antar grafik */
+  padding: 20px;
+  flex: 1;
+}
+
+.chart {
+  padding: 1rem;
+  border: 3px solid #fff;
+  border-radius: 1rem;
+  background: #c1c0c5;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Mengatur lebar maksimal grafik */
+}
+
+.chart1 {
+  padding: 1rem;
+  border: 3px solid #fff;
+  border-radius: 1rem;
+  background: #c1c0c5;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 375px; /* Mengatur lebar maksimal grafik */
+}
+
+.chart h2 {
+  color: rgb(20, 19, 19);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: transparent;
+  padding: 20px; /* Mengurangi padding agar sesuai dengan satu layar */
+  width: 100%;
+  text-align: center;
+  margin-top: -40px; /* Menggerakkan footer lebih ke atas */
+}
+
+footer p {
+  color: #fff;
+}
+
+/* Style for the back button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  padding: 20px;
+}
+
+/* Style for the back button */
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
+  color: #ffffff; /* Warna teks */
+  border: 2px solid rgb(15, 23, 61); /* Border berwarna biru tua */
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  width: 160px;
+  height: 50px;
+  line-height: 40px;
+  box-sizing: border-box;
+  background-color: transparent; /* Bagian tengah transparan */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Transisi untuk perubahan warna background dan border */
+  position: relative;
+  top: -30px; /* Menggerakkan tombol sedikit ke atas */
+}
+
+/* Warna border dan background saat hover */
+.back-button:hover {
+  background-color: rgb(15, 23, 61);
+  color: #ffffff;
+  border-color: rgb(15, 23, 61);
+}
+
+/* Responsif CSS */
+
+/* Untuk perangkat dengan lebar maksimum 600px */
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+    overflow-x: auto; /* Mengizinkan scrolling horizontal jika diperlukan */
+  }
+  .container {
+    flex-direction: column;
+  }
+  .chart,
+  .chart1 {
+    max-width: 100%; /* Lebar grafik mengikuti ukuran layar */
+  }
+  footer {
+    margin-top: 0; /* Menghilangkan margin atas pada footer */
+  }
+}
+
+/* Untuk perangkat dengan lebar antara 600px dan 1200px */
+@media (min-width: 600px) and (max-width: 1200px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Untuk perangkat dengan lebar lebih dari 1200px */
+@media (min-width: 1200px) {
+  body {
+    background-color: lightcoral;
+  }
+}
